@@ -7,7 +7,7 @@
 	</head>
 
 	<header>
-		<?php include_once("navbar.html"); ?>
+	
 
 	</header>
 	<body>
