@@ -6,3 +6,9 @@ body {
     padding-top: 0px;
   }
 }
+
+.jumbotron
+{
+  background-color:  black;
+  color:  white;
+}
