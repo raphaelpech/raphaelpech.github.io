@@ -1,14 +1,8 @@
 body {
-  padding-top: 220px;
+  padding-top: 110px;
 }
 @media (max-width: 979px) {
   body {
-    padding-top: 0px;
+    padding-top: 80px;
   }
-}
-
-.jumbotron
-{
-  background-color:  black;
-  color:  white;
 }
