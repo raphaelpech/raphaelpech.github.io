@@ -13,77 +13,11 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
 		<!--Night Mode-->
-		<script>
-
-			function setCookie(cname, cvalue, exdays) {
-			  const d = new Date();
-			  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-			  let expires = "expires="+ d.toUTCString();
-			  document.cookie = cname + "=" + cvalue + ";" + expires + "sameSite=Strict;secure;domain=;path=/";
-			}
-
-			function getCookie(cname) {
-			  let name = cname + "=";
-			  let decodedCookie = decodeURIComponent(document.cookie);
-			  let ca = decodedCookie.split(';');
-			  for(let i = 0; i <ca.length; i++) {
-			    let c = ca[i];
-			    while (c.charAt(0) == ' ') {
-			      c = c.substring(1);
-			    }
-			    if (c.indexOf(name) == 0) {
-			      return c.substring(name.length, c.length);
-			    }
-			  }
-			  return "";
-			}
-
-			function clearCookie(cname)
-			{
-				document.cookie = cname+'=; Max-Age=-99999999;';
-				console.log("Le cookie Night Mode a été supprimé.")
-			}
-
-			function nightMode()
-			{
-				let nightmode = getCookie("night-mode");
-			  	if (nightmode == "true") {
-			   		console.log("Woosh!");
-			   		setCookie("night-mode", "false", 2);
-
-			  	}else if(nightmode == "false")
-			  	{
-			  		console.log("Woosh.");
-			  		setCookie("night-mode", "true", 2);
-			  	}else
-			  	{
-			  		console.log("Ajout du cookie Night Mode.")
-				    setCookie("night-mode", "true", 2);
-			  	}
-			  	checkNightMode();
-			}
-
-			function checkNightMode()
-			{
-				let nightmode = getCookie("night-mode");
-				if(nightmode == "true")
-				{
-					document.body.style.background = "#121212";
-					document.getElementById('night-icon').fill = "white";
-					document.getElementById('body').style.color = "white";
-				}else
-				{
-					document.body.style.background = "white";
-					document.getElementById('night-icon').fill = "black";
-					document.getElementById('body').style.color = "black";
-				}
-			}
-
-		</script>
+		<script src="js\nightMode.js"></script>
 	</head>
 
-	<header>
-		<!--Navbar-->
+	<header id="header">
+	<!--Navbar-->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		  <div class="container-fluid">
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,13 +30,13 @@
 		          <a class="nav-link active" aria-current="page" href="#">Accueil</a>
 		        </li>
 		        <li class="nav-item">
-		          <a class="nav-link" href="#">Réalisations</a>
+		          <a class="nav-link" href="realisations.html">Réalisations</a>
 		        </li>
 		        <li class="nav-item">
-		          <a class="nav-link" href="#">Stage/Alternance</a>
+		          <a class="nav-link" href="stage-alternance.html">Stage/Alternance</a>
 		        </li>
 		        <li class="nav-item">
-		          <a class="nav-link" href="#">Veille technologique</a>
+		          <a class="nav-link" href="veille.html">Veille technologique</a>
 		        </li>
 		        <!-- Bouton Night Mode-->
 		        <li>
