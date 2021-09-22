@@ -3,6 +3,16 @@
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(192deg) brightness(106%) contrast(106%);
 }
 
+.shw-black
+{
+  box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important
+}
+
+.shw-white
+{
+  box-shadow:0 .5rem 1rem rgba(255,0,0,0.2)!important
+}
+
 body {
   padding-top: 110px;
 }
