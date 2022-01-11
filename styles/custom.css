@@ -1,29 +1,39 @@
+/* Changement couleur icône mode nuit (navbar) */
 .night-white
 {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(192deg) brightness(106%) contrast(106%);
 }
 
+/* Espacement avec la navbar */
 body {
   padding-top: 110px;
+  padding-bottom: 110px;
 }
 
+/* Espacement avec la navbar (mobile) */
 @media (max-width: 979px) {
   body {
     padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 
+/* Cards au survol (page Réalisations) */
 .card:hover{
+  transition-duration: 0.3s;
   transform: scale(1.05);
-box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  cursor: pointer;
 }
 
+/* Photo page Accueil */
 .photo:hover{
+  transition-duration: 0.3s;
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
 
+/* Langages utilisés (page Réalisations) */
 .langage {
   color: gray; 
   padding-top: 12px; 

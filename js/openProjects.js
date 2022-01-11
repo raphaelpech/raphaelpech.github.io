@@ -46,3 +46,19 @@ function openPHP()
     alert("A venir!");
 }
 
+/**
+ * Stage
+ */
+ function openStage()
+ {
+    window.location.href = "stage.html";
+ }
+
+ /**
+ * Alternance
+ */
+function openAlternance()
+{
+    window.location.href = "alternance.html";
+}
+

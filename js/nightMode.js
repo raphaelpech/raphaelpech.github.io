@@ -41,8 +41,13 @@ function nightMode()
   		setCookie("night-mode", "true", 2);
   	}else
   	{
-  		console.log("Ajout du cookie Night Mode.")
-	    setCookie("night-mode", "true", 2);
+		if (confirm('En cliquant sur OK, vous acceptez qu\'un cookie soit déposé sur votre appareil pour sauvegarder votre préférence pour le mode nuit.')) {
+			console.log("Ajout du cookie Night Mode.")
+	    	setCookie("night-mode", "true", 2);
+		  } else {
+			console.log('Refus du cookie Night Mode.');
+		  }
+  		
   	}
   	checkNightMode();
 }
@@ -50,9 +55,9 @@ function nightMode()
 function checkNightMode()
 {
 	let nightmode = getCookie("night-mode");
-
 	var cards = document.getElementsByClassName('card');
 	var footers = document.getElementsByClassName('langage');
+
 
 	if(nightmode == "true")
 	{

@@ -50,7 +50,33 @@
 
 	<body onload="checkNightMode()">
 		<div class="container text-center px-5" id="body">
-			<h2>En construction</h2>
+			<h1><b>Mes stages/alternances</b></h1>
+			<h5 class="mt-3 py-4">Vous retrouverez ici mes stages et alternances.</h5>
+			<!-- Ligne -->
+			<div class="row">
+				<div class="col-md d-flex align-items-stretch">
+					<!-- Stage Lexidia -->
+					<div class="card" style="width: 100%;" onclick="openStage();">
+						<img class="card-img-top" width="50%" src="assets/stage-alternance/logo-lexidia.png" alt="Lexidia">
+						<div class="card-body">
+							<h5 class="card-title" style="font-weight: bold;">Stage chez Lexidia</h5>
+							<p class="card-text">Mon stage de 1ère année a été effectué au sein de Lexidia, une association promouvant une méthode orthophonique novatrice: la sémiophonie.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md d-flex align-items-stretch">
+					<!-- Alternance Mairie -->
+					<div class="card" style="width: 100%;" onclick="openAlternance();">
+						<img class="card-img-top" width="50%" src="assets/stage-alternance/logo-mairie-blagnac.png" alt="Mairie Blagnac">
+						<div class="card-body">
+							<h5 class="card-title" style="font-weight: bold;">Alternance à la Mairie de Blagnac</h5>
+							<p class="card-text">Durant ma 2nde année, j’effectue une alternance en tant qu’apprenti au service SIRH de la mairie de Blagnac.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
 		</div>
 	</body>
 
