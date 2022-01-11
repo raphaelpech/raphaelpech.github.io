@@ -55,9 +55,16 @@ function nightMode()
 function checkNightMode()
 {
 	let nightmode = getCookie("night-mode");
+
+	//Page réalisations
 	var cards = document.getElementsByClassName('card');
 	var footers = document.getElementsByClassName('langage');
 
+	//Page stage/alternance
+	var imgs = document.getElementsByClassName('card-img-top');
+
+	//Page veille
+	var table = document.getElementsByClassName('table');
 
 	if(nightmode == "true")
 	{
@@ -73,6 +80,16 @@ function checkNightMode()
 		{
 			footers[counter].style.color = "white";
 		}
+
+		for(var counter = 0; counter < imgs.length; counter++)
+		{
+			imgs[counter].style.background = "white";
+		}
+
+		for(var counter = 0; counter < table.length; counter++)
+		{
+			table[counter].style.color = "white";
+		}
 		
 	}else
 	{
@@ -87,6 +104,11 @@ function checkNightMode()
 		for(var counter = 0; counter < footers.length; counter++)
 		{
 			footers[counter].style.color = "gray";
+		}
+
+		for(var counter = 0; counter < table.length; counter++)
+		{
+			table[counter].style.color = "black";
 		}
 	}
 }
