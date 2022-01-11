@@ -50,15 +50,38 @@ function nightMode()
 function checkNightMode()
 {
 	let nightmode = getCookie("night-mode");
+
+	var cards = document.getElementsByClassName('card');
+	var footers = document.getElementsByClassName('langage');
+
 	if(nightmode == "true")
 	{
 		document.body.style.background = "#121212";
 		document.getElementById('night-icon').src = "assets/icons/moon-fill.svg";
 		document.getElementById('body').style.color = "white";
+		for(var counter = 0; counter < cards.length; counter++)
+		{
+			cards[counter].style.background = "#343a40";
+		}
+
+		for(var counter = 0; counter < footers.length; counter++)
+		{
+			footers[counter].style.color = "white";
+		}
+		
 	}else
 	{
 		document.body.style.background = "white";
 		document.getElementById('night-icon').src = "assets/icons/moon.svg";
 		document.getElementById('body').style.color = "black";
+		for(var counter = 0; counter < cards.length; counter++)
+		{
+			cards[counter].style.background = "white";
+		}
+
+		for(var counter = 0; counter < footers.length; counter++)
+		{
+			footers[counter].style.color = "gray";
+		}
 	}
 }
